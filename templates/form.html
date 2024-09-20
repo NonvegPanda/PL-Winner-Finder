@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Form</title>
+</head>
+<body>
+    <h1>Enter a year to find the Premier League winner</h1>
+    <form action="/" method="post">
+        <label for="user_input">Year:</label>
+        <input type="text" id="user_input" name="user_input">
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if user_input %}
+        <h2>You entered: {{ user_input }}</h2>
+    {% endif %}
+    
+    {% if winner %}
+        <h2>Premier League winner in {{ user_input }}: {{ winner }}</h2>
+    {% endif %}
+</body>
+</html>
